@@ -1,0 +1,46 @@
+<head>
+    <link rel="stylesheet" href="data-component.component.css">
+</head>
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <td>Lot Id</td>
+                <td>Occupant's Name</td>
+                <td>Car Number</td>
+                <td>Start Date</td>
+                <td>End Date</td>
+              </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let parkingLot of parkingdata" (click)="openPopup(parkingLot.id, parkingLot.name, parkingLot.carNumber, parkingLot.startDate, parkingLot.endDate)">
+              <td>{{ parkingLot.id }}</td>
+              <td>{{ parkingLot.name }}</td>
+              <td>{{ parkingLot.carNumber }}</td>
+              <td>{{ parkingLot.startDate }}</td>
+              <td>{{ parkingLot.endDate }}</td>
+            </tr>
+          </tbody>
+      </table>
+</div>
+<div id="myModal" class="modal">
+  <form class="modal-content">
+    <span class="close" (click)="closePopup()">&times;</span>
+    <h2>Parking data</h2>
+    <label for="lot_id">Lot Id:</label>
+    <input type="text" name="lot_id" [(ngModel)]="parkingId" value="{{ oldParkingId }}" required>
+    <label for="name">Occupant's Name:</label>
+    <input type="text" name="name" [(ngModel)]="name" value="{{ name }}" required>
+    <label for="carNumber">Car Number:</label>
+    <input type="text" name="carNumber" [(ngModel)]="carNumber" value="{{ carNumber }}" required>
+    <label for="startDate">Start Date:</label>
+    <input type="text" name="startDate" [(ngModel)]="startDate" value="{{ startDate }}"required>
+    <label for="endDate">End Date:</label>
+    <input type="text" name="endDate"[(ngModel)]="endDate" value=" {{ endDate }}" required>
+    <div class="button-container">
+      <button (click)="addParkingData()">Insert</button>
+      <button type="submit">Edit</button>
+      <button (click)="deleteParkingData()"type="submit">Delete</button>
+    </div>
+  </form>
+</div>

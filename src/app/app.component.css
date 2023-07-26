@@ -1,0 +1,76 @@
+.title-container {
+    background-color: #05445E;
+    color: #ffffff;
+    display: flex;
+    align-items: center; 
+    padding-top: 13px;
+    padding-bottom: 7px;
+}
+.title-container h3 {
+    margin-left: 15px;
+    margin-right: 270px;
+}
+.title-container a {
+    cursor: pointer;
+    margin-left: 30px;
+}
+.title-container .function-button {
+    margin-left: 390px;
+    background-color: #57b6ac;
+    border-radius: 8px;
+    padding: 8px;
+}
+.title-container a:hover {
+    transform: translateY(-1px);
+}
+.content-container {
+    display: flex;
+}
+.summary-container {
+    height: 200px;
+    background-color: #57b6ac;
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+    border-radius: 5px;
+    padding: 20px; 
+    font-size: 16px; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.summary-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.summary-container h4 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    align-items: center;
+}
+.element-container{
+    visibility: hidden;
+    background-color: rgb(212, 210, 210);
+    border-radius: 5px;
+    margin-left: 100px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 20px;
+}
+.element-container h3 {
+    display: flex;
+    justify-content: center;
+}
+.element-container input {
+    width: 150px;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-right: 47px;
+}
+.button-container button {
+    font-size: 20px;
+    padding: 8px;
+    margin: 50px;
+}
