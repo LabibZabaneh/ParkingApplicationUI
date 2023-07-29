@@ -38,8 +38,7 @@
     <label for="endDate">End Date:</label>
     <input type="text" name="endDate"[(ngModel)]="endDate" value=" {{ endDate }}" required>
     <div class="button-container">
-      <button (click)="addParkingData()">Insert</button>
-      <button type="submit">Edit</button>
+      <button (click)="editParkingData()" type="submit">Edit</button>
       <button (click)="deleteParkingData()"type="submit">Delete</button>
     </div>
   </form>

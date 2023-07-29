@@ -59,4 +59,11 @@ export class DataComponentComponent implements OnInit {
     this.closePopup()
   }
   }
+
+  editParkingData(){
+    this.parkingLotService.editParkingData(this.oldParkingId, this.parkingId, this.name, this.carNumber, this.startDate, this.endDate).subscribe ((data => {
+      this.parkingdata = data
+    }))
+    this.closePopup()
+  }
 }

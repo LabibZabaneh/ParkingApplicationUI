@@ -8,12 +8,16 @@ import { DataServiceService } from './data-service.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FilterComponent } from './filter/filter.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataComponentComponent,
-    FilterComponent
+    FilterComponent,
+    SideBarComponent,
+    DashboardComponent
   ],                                 
   imports: [
     BrowserModule,

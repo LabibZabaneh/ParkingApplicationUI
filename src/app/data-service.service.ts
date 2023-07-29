@@ -17,7 +17,12 @@ export class DataServiceService {
   addParkingData(id: string, name: string, carNumber: string, startDate:string, endDate: string) :Observable<any[]>{
     return this.http.get<any[]>(`${this.baseUrl}/addParking/${id}//${name}/${carNumber}/${startDate}/${endDate}`)
   }
+
   deleteParkingData(id :string) :Observable<any[]>{
     return this.http.delete<any[]>(`${this.baseUrl}/deleteParking/${id}`)
+  }
+
+  editParkingData(oldId :string, newId: string, name: string, carNumber: string, startDate:string, endDate: string) :Observable<any[]>{
+    return this.http.get<any[]>(`${this.baseUrl}/editParking/${newId}//${name}/${carNumber}/${startDate}/${endDate}`)
   }
 }

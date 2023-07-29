@@ -1,0 +1,19 @@
+<div class="header">
+    <div class="side-nav">
+      <img class="logo" src="assets/logo.svg" alt="Logo"/>
+      <ul class="nav-links">
+          <li (mouseover)="changeUserURL('assets/users-hover.svg')" (mouseout)="changeUserURL('assets/users.svg')">
+            <a><img class="icon" [src]="userImage" alt="Users Icon"/><p>Total Spaces</p></a>
+          </li>
+          <li (mouseover)="changeAvailableURL('assets/available-hover.svg')" (mouseout)="changeAvailableURL('assets/available.svg')">
+            <a><img class="icon" [src]="availableImage" alt="Available Icon"/><p>Available</p></a>
+          </li>
+          <li (mouseover)="changeOccupiedURL('assets/occupied-hover.svg')" (mouseout)="changeOccupiedURL('assets/occupied.svg')">
+            <a><img class="icon" [src]="occupiedImage" alt="Occupied Icon"/><p>Occupied</p></a>
+          </li>
+          <li (mouseover)="changeCalendarURL('assets/calendar-hover.svg')" (mouseout)="changeCalendarURL('assets/calendar.svg')">
+            <a><img class="icon" [src]="calendarImage" alt="Calendar Icon"/><p>Waiting List</p></a>
+          <div class="active"></div>  
+      </ul>
+    </div>
+  </div>

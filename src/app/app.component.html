@@ -1,22 +1,67 @@
 <head>
   <link rel="stylesheet" type="text/css" href="app.component.css">
+  <script src="https://kit.fontawesome.com/c9e4327fe5.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="title-container">
-    <h3><b>Parking Data</b></h3>
-    <a>Available Parking</a>
-    <a>Occupied Parking</a>
-    <a class="function-button" (click)="addParkingData()">Insert Parking</a>
-  </div>
-  <div class="content-container">
-    <div class="summary-container">
-      <h4>Summary</h4>
-      <p>Total Records: {{ getParkingDataLength()}}</p>
-      <p>Occupied Slots: 25</p>
-      <p>Available Slots: 25</p>
+  <div class="container">
+    <div class="side-nav">
+      <img class="logo" src="assets/logo-2.svg" alt="Logo" (click)="changeContentPage('dashboard')"/>
+      <ul class="nav-links">
+          <li (mouseover)="changeUserURL('assets/user-hover-3.svg')" (mouseout)="changeUserURL('assets/user-3.svg')">
+            <a (click)="changeContentPage('total-spaces')"><img class="icon" [src]="userImage" alt="Users Icon"/><p>Total Spaces</p></a>
+          </li>
+          <li (mouseover)="changeAvailableURL('assets/available-hover-3.svg')" (mouseout)="changeAvailableURL('assets/available-3.svg')">
+            <a><img class="icon" [src]="availableImage" alt="Available Icon"/><p>Available Spaces</p></a>
+          </li>
+          <li (mouseover)="changeOccupiedURL('assets/occupied-hover-3.svg')" (mouseout)="changeOccupiedURL('assets/occupied-3.svg')">
+            <a (click)="changeContentPage('occupied')"><img class="icon" [src]="occupiedImage" alt="Occupied Icon"/><p>Occupied Spaces</p></a>
+          </li>
+          <li (mouseover)="changeCalendarURL('assets/calendar-hover-3.svg')" (mouseout)="changeCalendarURL('assets/calendar-3.svg')">
+            <a><img class="icon" [src]="calendarImage" alt="Calendar Icon"/><p>Waiting List</p></a>
+          </li>
+          <li (mouseover)="changeReportURL('assets/report-hover-3.svg')" (mouseout)="changeReportURL('assets/report-3.svg')">
+            <a><img class="icon" [src]="reportImage" alt="Pie Chart Icon"/><p>Reports</p></a>
+          </li>
+          <div class="active"></div>  
+      </ul>
     </div>
-    <div class="table-container">
-     <app-data-component></app-data-component>
+    <div *ngIf="contentPage==='dashboard'" class="content-container">
+      <div class="header">
+        <h3>Dashboard</h3>
+      </div>
+      <div class="today">
+        <div class="today-data-container">
+          <div class="today-card-1">
+            <h1>50</h1><br>
+            <h3>Total Spaces</h3>
+          </div>
+          <div class="today-card-2">
+            <h1>50</h1><br>
+            <h3>Available Spaces</h3>
+          </div>
+          <div class="today-card-3">
+            <h1>50</h1><br>
+            <h3>Occupied Spaces</h3>
+          </div>
+          <div class="today-card-4">
+            <h1>50</h1><br>
+            <h3>Waiting List</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="contentPage=='occupied'" class="content-container">
+      <div class="header">
+        <h3>Occupied Spaces</h3>
+      </div>
+      <div class="total-spaces-body">
+        <div *ngFor="let parkingLot of parkingdata; let i = index" class="total-spaces-card" [style.background-color]="backgroundColors[i % backgroundColors.length]">
+            <h3>{{ parkingLot.id }}</h3><br>
+            <p>{{ parkingLot.name }}</p>
+            <p>From {{ parkingLot.startDate }}</p>
+            <p>Until {{ parkingLot.endDate }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </body>

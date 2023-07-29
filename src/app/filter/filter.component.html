@@ -1,1 +1,27 @@
-<p>filter works!</p>
+<head>
+    <link rel="stylesheet" href="filter.component.css">
+</head>
+<div class="filter-sidebar">
+    <h5>Filter Options</h5>
+    <div class="filter-item">
+      <label for="filter-parkingId">Parking ID:</label>
+      <input type="text" id="filter-parkingId">
+    </div>
+    <div class="filter-item">
+      <label for="filter-occupantName">Occupant's Name:</label>
+      <input type="text" id="filter-occupantName">
+    </div>
+    <div class="filter-item">
+      <label for="filter-carNumber">Car Number:</label>
+      <input type="text" id="filter-carNumber">
+    </div>
+    <div class="filter-item">
+      <label for="filter-startDate">Start Date:</label>
+      <input type="date" id="filter-startDate">
+    </div>
+    <div class="filter-item">
+      <label for="filter-endDate">End Date:</label>
+      <input type="date" id="filter-endDate">
+    </div>
+    <button onclick="applyFilters()">Apply Filters</button>
+  </div>

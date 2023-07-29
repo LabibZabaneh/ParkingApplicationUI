@@ -4,12 +4,11 @@
 .table-container {
   max-height: 300px;
   overflow-y: auto;
-  margin-top: 30px;
 }
 
 table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
   margin-top: 20px;
 }
 
@@ -17,6 +16,7 @@ thead {
   position: sticky;
   top: 0;
   background-color: #57b6ac;
+  border-radius: 20px !important;
 }
 
 tbody {
@@ -57,12 +57,12 @@ tr:nth-child(even) {
   background-color: #fff;
   padding: 10px;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 60%;
+  height: 70%;
 }
 
 #myModal .close {
