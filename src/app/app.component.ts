@@ -19,8 +19,12 @@ export class AppComponent {
   occupiedImage = 'assets/occupied-3.svg'
   calendarImage = 'assets/calendar-3.svg'
   reportImage = 'assets/report-3.svg'
-  contentPage = 'dashboard'
+  contentPage = 'occupied'
   backgroundColors = ['#7D7463', '#dabb83', '#A8A196', '#dabb83','#A8A196']
+  insertParkingId! : string
+  insertName!: string
+  insertStartDate!: string
+  insertEndDate!: string
 
   constructor (private parkingLotService: DataServiceService){}
 
@@ -79,4 +83,18 @@ changeReportURL(newURL: string): void {
 changeContentPage(page: string): void {
   this.contentPage = page
 }
+
+openInsertPopup(){
+  const modal = document.getElementById("occupied-insert-Modal")
+  modal!.style.display = "block";
+}
+
+closeInsertPopup(){
+  const modal = document.getElementById("occupied-insert-Modal");
+  modal!.style.display = "none";
+}
+
+applyInsertPopupValues() {
+    this.closeInsertPopup()
+  }
 }

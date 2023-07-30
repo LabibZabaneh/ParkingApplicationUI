@@ -22,7 +22,7 @@
           <li (mouseover)="changeReportURL('assets/report-hover-3.svg')" (mouseout)="changeReportURL('assets/report-3.svg')">
             <a><img class="icon" [src]="reportImage" alt="Pie Chart Icon"/><p>Reports</p></a>
           </li>
-          <div class="active"></div>  
+          <div class="active"></div>
       </ul>
     </div>
     <div *ngIf="contentPage==='dashboard'" class="content-container">
@@ -53,7 +53,7 @@
     <div *ngIf="contentPage=='occupied'" class="occupied-content-container">
       <div class="occupied-header">
         <h3>Occupied Spaces</h3>
-        <h4 class="occupied-insert-button">Insert</h4>
+        <h4 class="occupied-insert-button" (click)="openInsertPopup()">Insert</h4>
       </div>
       <div class="occupied-body">
         <div *ngFor="let parkingLot of parkingdata; let i = index" class="occupied-card" [style.background-color]="backgroundColors[i % backgroundColors.length]">
@@ -62,6 +62,23 @@
             <p>From {{ parkingLot.startDate }}</p>
             <p>Until {{ parkingLot.endDate }}</p>
         </div>
+      </div>
+      <div id="occupied-insert-Modal" class="Modal">
+        <form class="occupied-insert-modal-content">
+          <h2>Insert New Parking</h2><br>
+          <label>Parking Id:</label>
+          <input type="text" name="parkingId" [(ngModel)]="insertParkingId">
+          <label>Occupant's Name:</label>
+          <input type="text" name="name" [(ngModel)]="insertName">
+          <label>Start Date:</label>
+          <input type="text" name="startDate" [(ngModel)]="insertStartDate">
+          <label>End Date:</label>
+          <input type="text" name="endDate" [(ngModel)]="insertEndDate">
+          <div class="occupied-insert-popup-button-container"><br>
+            <h4 class="occupied-insert-popup-insert-button" (click)="applyInsertPopupValues()">Insert</h4>
+            <h4 class="occupied-insert-popup-close-button" (click)="closeInsertPopup()">Close</h4>
+          </div>
+        </form>
       </div>
     </div>
   </div>
