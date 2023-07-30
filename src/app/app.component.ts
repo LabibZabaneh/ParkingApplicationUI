@@ -30,7 +30,6 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.loadParkingdata()
-    console.log(this.parkingdata);
   }
 
 loadParkingdata(){
@@ -40,9 +39,9 @@ loadParkingdata(){
 }
 
 addParkingData(){
-   this.parkingLotService.addParkingData(this.lotId, this.name, this.carNumber, this.startDate, this.endDate).subscribe((data => {
+   this.parkingLotService.addParkingData(this.insertParkingId, this.insertName, '123', this.insertStartDate, this.insertEndDate).subscribe((data => {
     this.parkingdata = data
-    console.log(this.parkingdata);
+     this.closeInsertPopup()
   }))
 }
 
@@ -93,8 +92,4 @@ closeInsertPopup(){
   const modal = document.getElementById("occupied-insert-Modal");
   modal!.style.display = "none";
 }
-
-applyInsertPopupValues() {
-    this.closeInsertPopup()
-  }
 }
