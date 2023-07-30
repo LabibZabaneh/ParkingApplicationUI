@@ -27,8 +27,7 @@ export class AppComponent {
   ngOnInit(): void {
     this.loadParkingdata()
     console.log(this.parkingdata);
-    
-}
+  }
 
 loadParkingdata(){
   this.parkingLotService.getParkingData().subscribe(data => {

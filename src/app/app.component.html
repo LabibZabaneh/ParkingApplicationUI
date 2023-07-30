@@ -31,15 +31,15 @@
       </div>
       <div class="today">
         <div class="today-data-container">
-          <div class="today-card-1">
+          <div (click)="changeContentPage('total-spaces')" class="today-card-1">
             <h1>50</h1><br>
             <h3>Total Spaces</h3>
           </div>
-          <div class="today-card-2">
+          <div (click)="changeContentPage('available')" class="today-card-2">
             <h1>50</h1><br>
             <h3>Available Spaces</h3>
           </div>
-          <div class="today-card-3">
+          <div (click)="changeContentPage('occupied')" class="today-card-3">
             <h1>50</h1><br>
             <h3>Occupied Spaces</h3>
           </div>
@@ -50,12 +50,13 @@
         </div>
       </div>
     </div>
-    <div *ngIf="contentPage=='occupied'" class="content-container">
-      <div class="header">
+    <div *ngIf="contentPage=='occupied'" class="occupied-content-container">
+      <div class="occupied-header">
         <h3>Occupied Spaces</h3>
+        <h4 class="occupied-insert-button">Insert</h4>
       </div>
-      <div class="total-spaces-body">
-        <div *ngFor="let parkingLot of parkingdata; let i = index" class="total-spaces-card" [style.background-color]="backgroundColors[i % backgroundColors.length]">
+      <div class="occupied-body">
+        <div *ngFor="let parkingLot of parkingdata; let i = index" class="occupied-card" [style.background-color]="backgroundColors[i % backgroundColors.length]">
             <h3>{{ parkingLot.id }}</h3><br>
             <p>{{ parkingLot.name }}</p>
             <p>From {{ parkingLot.startDate }}</p>

@@ -1,25 +1,25 @@
 <div class="content-container">
-    <div class="header">
-      <h3>Dashboard</h3>
-    </div>
-    <div class="today">
-      <div class="today-data-container">
-        <div class="today-card-1">
-          <h1>50</h1>
-          <h3>Total Spaces</h3>
-        </div>
-        <div class="today-card-2">
-          <h1>50</h1><br>
-          <h3>Available Spaces</h3>
-        </div>
-        <div class="today-card-3">
-          <h1>50</h1><br>
-          <h3>Occupied Spaces</h3>
-        </div>
-        <div class="today-card-4">
-          <h1>50</h1><br>
-          <h3>Waiting List</h3>
-        </div>
+  <div class="header">
+    <h3>Dashboard</h3>
+  </div>
+  <div class="today">
+    <div class="today-data-container">
+      <div (click)="changeContentPage('total-spaces')" class="today-card-1">
+        <h1>50</h1><br>
+        <h3>Total Spaces</h3>
+      </div>
+      <div (click)="changeContentPage('available')" class="today-card-2">
+        <h1>50</h1><br>
+        <h3>Available Spaces</h3>
+      </div>
+      <div (click)="changeContentPage('occupied')" class="today-card-3">
+        <h1>50</h1><br>
+        <h3>Occupied Spaces</h3>
+      </div>
+      <div class="today-card-4">
+        <h1>50</h1><br>
+        <h3>Waiting List</h3>
       </div>
     </div>
   </div>
+</div>

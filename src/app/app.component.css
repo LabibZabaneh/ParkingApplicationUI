@@ -9,13 +9,17 @@
 /* Side Nav */
 
 .side-nav {
-    width: 265px;
+    width: 20%;
     height: 100%;
     background: #FE0000;
     position: fixed;
     top: 0;
     left: 0;
-    padding: 20px  30px;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+.side-nav p {
+    font-size: 15px;
 }
 .title {
     margin-top: 20px;
@@ -49,7 +53,7 @@
     width: 120px;
     height: 35px;
     position: absolute;
-    left: -5%;
+    left: -2%;
     top: 2%;
     z-index: -1;
     border-radius: 6px;
@@ -61,23 +65,23 @@
 }
 .nav-links li:nth-child(1):hover ~.active {
     top: 1.5%;
-    width: 162px;
+    width: 145px;
 }
 .nav-links li:nth-child(2):hover ~.active {
     top: 21%;
-    width: 200px;
+    width: 174px;
 }
 .nav-links li:nth-child(3):hover ~.active {
     top: 41%;
-    width: 202px;
+    width: 177px;
 }
 .nav-links li:nth-child(4):hover ~.active {
     top: 61%;
-    width: 153px;
+    width: 137px;
 }
 .nav-links li:nth-child(5):hover ~.active {
     top: 81.1%;
-    width: 122px;
+    width: 112px;
 }
 .logo {
     height: 85px;
@@ -107,12 +111,13 @@
     position: fixed;
     top: 0;
     left: 0;
-    margin-left: 265px;
+    margin-left: 15%;
     background-color: #ebe9e9;
 }
 .header {
+    display: flex;
     background-color: #fff;
-    width: 990px;
+    width: 83%;
     height: 60px;
     margin-top: 20px;
     margin-left: 20px;
@@ -121,10 +126,11 @@
     padding: 15px;
     border-radius: 8px;
     color: #ff0000;
+    align-items: center;
 }
 .today {
     background-color: #fff;
-    width: 990px;
+    width: 83%;
     height: 155px;
     margin-top: 10px;
     margin-left: 20px;
@@ -141,7 +147,7 @@
     display: flex;
     flex-direction: column;
     background-color: #7D7463;
-    width:300px;
+    width:25%;
     height: 115px;
     margin: 5px;
     border-radius: 8px;
@@ -153,7 +159,7 @@
     display: flex;
     flex-direction: column;
     background-color: #dabb83;
-    width:300px;
+    width:25%;
     height: 115px;
     margin: 5px;
     border-radius: 8px;
@@ -165,7 +171,7 @@
     display: flex;
     flex-direction: column;
     background-color: #A8A196;
-    width:300px;
+    width:25%;
     height: 115px;
     margin: 5px;
     border-radius: 8px;
@@ -177,7 +183,7 @@
     display: flex;
     flex-direction: column;
     background-color: #7D7463;
-    width:300px;
+    width:25%;
     height: 115px;
     margin: 5px;
     border-radius: 8px; 
@@ -185,14 +191,69 @@
     padding: 15px 20px;
     color: #fff;
 }
+.today-card-1:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+.today-card-2:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+.today-card-3:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+.today-card-4:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+}
 
-/* Total Spaces */
+/* Occupied */
 
-.total-spaces-body {
+.occupied-content-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 15%;
+    background-color: #ebe9e9;
+}
+.occupied-header {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    width: 83%;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    color: #ff0000;
+    align-items: center;
+    justify-content: flex-start;
+}
+.occupied-insert-button {
+    background-color: green;
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 3px;
+}
+.occupied-header h3 {
+    width: 95%;
+}
+.occupied-insert-button:hover {
+    cursor: pointer;
+}   
+.occupied-body {
     display: flex;
     flex-wrap: wrap;
     background-color: #fff;
-    width: 990px;
+    width: 83%;
     margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
@@ -203,7 +264,7 @@
     gap: 5px;
     overflow-y: auto;
 }
-.total-spaces-card {
+.occupied-card {
     display: flex;
     flex-direction: column;
     width: 145px;
@@ -213,6 +274,10 @@
     margin-right: 10px;
     margin-bottom: 5px;
 }
-.total-spaces-card p {
+.occupied-card p {
     padding-bottom: 5px ;
+}
+.occupied-card:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
 }

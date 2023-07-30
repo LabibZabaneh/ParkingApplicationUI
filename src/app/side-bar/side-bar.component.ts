@@ -13,6 +13,7 @@ export class SideBarComponent {
   occupiedImage = 'assets/occupied.svg'
   calendarImage = 'assets/calendar.svg'
   reportImage = 'assets/report.svg'
+  contentPage = 'dashboard'
 
   constructor (private parkingLotService: DataServiceService){}
   
@@ -34,5 +35,9 @@ export class SideBarComponent {
   
   changeReportURL(newURL: string): void {
     this.reportImage = newURL;
+  }
+
+  changeContentPage(page: string): void {
+    this.contentPage = page
   }
 }

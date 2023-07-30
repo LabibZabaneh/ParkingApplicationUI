@@ -1,19 +1,21 @@
-<div class="header">
-    <div class="side-nav">
-      <img class="logo" src="assets/logo.svg" alt="Logo"/>
-      <ul class="nav-links">
-          <li (mouseover)="changeUserURL('assets/users-hover.svg')" (mouseout)="changeUserURL('assets/users.svg')">
-            <a><img class="icon" [src]="userImage" alt="Users Icon"/><p>Total Spaces</p></a>
-          </li>
-          <li (mouseover)="changeAvailableURL('assets/available-hover.svg')" (mouseout)="changeAvailableURL('assets/available.svg')">
-            <a><img class="icon" [src]="availableImage" alt="Available Icon"/><p>Available</p></a>
-          </li>
-          <li (mouseover)="changeOccupiedURL('assets/occupied-hover.svg')" (mouseout)="changeOccupiedURL('assets/occupied.svg')">
-            <a><img class="icon" [src]="occupiedImage" alt="Occupied Icon"/><p>Occupied</p></a>
-          </li>
-          <li (mouseover)="changeCalendarURL('assets/calendar-hover.svg')" (mouseout)="changeCalendarURL('assets/calendar.svg')">
-            <a><img class="icon" [src]="calendarImage" alt="Calendar Icon"/><p>Waiting List</p></a>
-          <div class="active"></div>  
-      </ul>
-    </div>
-  </div>
+<div class="side-nav">
+  <img class="logo" src="assets/logo-2.svg" alt="Logo" (click)="changeContentPage('dashboard')"/>
+  <ul class="nav-links">
+      <li (mouseover)="changeUserURL('assets/user-hover-3.svg')" (mouseout)="changeUserURL('assets/user-3.svg')">
+        <a (click)="changeContentPage('total-spaces')"><img class="icon" [src]="userImage" alt="Users Icon"/><p>Total Spaces</p></a>
+      </li>
+      <li (mouseover)="changeAvailableURL('assets/available-hover-3.svg')" (mouseout)="changeAvailableURL('assets/available-3.svg')">
+        <a><img class="icon" [src]="availableImage" alt="Available Icon"/><p>Available Spaces</p></a>
+      </li>
+      <li (mouseover)="changeOccupiedURL('assets/occupied-hover-3.svg')" (mouseout)="changeOccupiedURL('assets/occupied-3.svg')">
+        <a (click)="changeContentPage('occupied')"><img class="icon" [src]="occupiedImage" alt="Occupied Icon"/><p>Occupied Spaces</p></a>
+      </li>
+      <li (mouseover)="changeCalendarURL('assets/calendar-hover-3.svg')" (mouseout)="changeCalendarURL('assets/calendar-3.svg')">
+        <a><img class="icon" [src]="calendarImage" alt="Calendar Icon"/><p>Waiting List</p></a>
+      </li>
+      <li (mouseover)="changeReportURL('assets/report-hover-3.svg')" (mouseout)="changeReportURL('assets/report-3.svg')">
+        <a><img class="icon" [src]="reportImage" alt="Pie Chart Icon"/><p>Reports</p></a>
+      </li>
+      <div class="active"></div>  
+  </ul>
+</div>

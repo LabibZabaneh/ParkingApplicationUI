@@ -1,3 +1,5 @@
+/* Dashboard */
+
 .content-container {
     display: flex;
     flex-direction: column;
@@ -6,12 +8,13 @@
     position: fixed;
     top: 0;
     left: 0;
-    margin-left: 230px;
+    margin-left: 15%;
     background-color: #ebe9e9;
 }
 .header {
+    display: flex;
     background-color: #fff;
-    width: 1000px;
+    width: 83%;
     height: 60px;
     margin-top: 20px;
     margin-left: 20px;
@@ -20,15 +23,16 @@
     padding: 15px;
     border-radius: 8px;
     color: #ff0000;
+    align-items: center;
 }
 .today {
     background-color: #fff;
-    width: 1000px;
-    height: 125px;
+    width: 83%;
+    height: 155px;
     margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 15px;
     border-radius: 8px;
     color: #ff0000;
@@ -40,18 +44,19 @@
     display: flex;
     flex-direction: column;
     background-color: #7D7463;
-    width: 300px;
+    width:25%;
     height: 115px;
     margin: 5px;
     border-radius: 8px;
     justify-content: left;
     color: #fff;
+    padding: 15px 20px;
 }
 .today-card-2 {
     display: flex;
     flex-direction: column;
     background-color: #dabb83;
-    width:300px;
+    width:25%;
     height: 115px;
     margin: 5px;
     border-radius: 8px;
@@ -63,7 +68,7 @@
     display: flex;
     flex-direction: column;
     background-color: #A8A196;
-    width: 300px;
+    width:25%;
     height: 115px;
     margin: 5px;
     border-radius: 8px;
@@ -75,11 +80,27 @@
     display: flex;
     flex-direction: column;
     background-color: #7D7463;
-    width:300px;
+    width:25%;
     height: 115px;
     margin: 5px;
     border-radius: 8px; 
     justify-content: left;
     padding: 15px 20px;
     color: #fff;
+}
+.today-card-1:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+.today-card-2:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+.today-card-3:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+.today-card-4:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
 }
