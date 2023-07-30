@@ -41,7 +41,7 @@ loadParkingdata(){
 addParkingData(){
    this.parkingLotService.addParkingData(this.insertParkingId, this.insertName, '123', this.insertStartDate, this.insertEndDate).subscribe((data => {
     this.parkingdata = data
-     this.closeInsertPopup()
+     this.closePopup("occupied-insert-Modal")
   }))
 }
 
@@ -88,8 +88,8 @@ openInsertPopup(){
   modal!.style.display = "block";
 }
 
-closeInsertPopup(){
-  const modal = document.getElementById("occupied-insert-Modal");
+closePopup(modelName: string){
+  const modal = document.getElementById(modelName);
   modal!.style.display = "none";
 }
 }

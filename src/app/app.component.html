@@ -1,6 +1,7 @@
 <head>
   <link rel="stylesheet" type="text/css" href="app.component.css">
   <script src="https://kit.fontawesome.com/c9e4327fe5.js" crossorigin="anonymous"></script>
+  <title>Parking Application</title>
 </head>
 <body>
   <div class="container">
@@ -76,9 +77,21 @@
           <input type="text" name="endDate" [(ngModel)]="insertEndDate">
           <div class="occupied-insert-popup-button-container"><br>
             <h4 class="occupied-insert-popup-insert-button" (click)="addParkingData()">Insert</h4>
-            <h4 class="occupied-insert-popup-close-button" (click)="closeInsertPopup()">Close</h4>
+            <h4 class="occupied-insert-popup-close-button" (click)="closePopup('occupied-insert-Modal')">Close</h4>
           </div>
         </form>
+      </div>
+      <div id ="occupied-view-Modal" class="Modal">
+        <div class="occupied-view-card">
+          <h1>12</h1><br>
+          <h2>Labib</h2>
+          <h4>From 12-11-2023</h4>
+          <h4>Until 13-11-2023</h4>
+          <div class="occupied-view-card-button-container"><br>
+            <h4 class="occupied-view-popup-button-edit-button">Edit</h4>
+            <h4 class="occupied-view-popup-button-close-button" (click)="closePopup('occupied-view-Modal')">Close</h4>
+          </div>
+        </div>
       </div>
     </div>
   </div>

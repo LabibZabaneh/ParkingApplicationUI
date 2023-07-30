@@ -11,7 +11,7 @@
 .side-nav {
     width: 20%;
     height: 100%;
-    background: #FE0000;
+    background: #d20a0a;
     position: fixed;
     top: 0;
     left: 0;
@@ -100,6 +100,18 @@
     top: -5px;
     margin-right: 12px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Dashboard */
 
@@ -207,6 +219,16 @@
     cursor: pointer;
     transform: translateY(-3px);
 }
+
+
+
+
+
+
+
+
+
+
 
 /* Occupied */
 
@@ -329,6 +351,53 @@
   margin-left: 30%;
 }
 #occupied-insert-Modal .occupied-insert-popup-close-button:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+}
+#occupied-view-Modal {
+  display: block;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#occupied-view-Modal .occupied-view-card {
+  background-color: #A8A196;
+  width: fit-content;
+  padding: 10px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 5%;
+  left: 35%;
+}
+#occupied-view-Modal .occupied-view-card-button-container {
+  display: flex;
+  margin-top: 20%;
+}
+#occupied-view-Modal .occupied-view-popup-button-close-button {
+  background-color: #ff0000;
+  width: fit-content;
+  padding: 5px 5px;
+  border-radius: 5px;
+  color: #fff;
+  margin-right: 10%;
+  margin-left: 14%;
+}
+#occupied-view-Modal .occupied-view-popup-button-close-button:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+}
+#occupied-view-Modal .occupied-view-popup-button-edit-button {
+  background-color: #e8a908;
+  width: fit-content;
+  padding: 5px 5px;
+  border-radius: 5px;
+  color: #fff;
+  margin-right: 10%;
+}
+#occupied-view-Modal .occupied-view-popup-button-edit-button:hover {
   cursor: pointer;
   transform: translateY(-1px);
 }
