@@ -14,17 +14,23 @@ export class AppComponent {
   carNumber!: string
   startDate!: string
   endDate!: string
-  userImage = 'assets/user-3.svg'
-  availableImage = 'assets/available-3.svg'
-  occupiedImage = 'assets/occupied-3.svg'
-  calendarImage = 'assets/calendar-3.svg'
-  reportImage = 'assets/report-3.svg'
+  userImage = 'assets/user-0.svg'
+  availableImage = 'assets/available-0.svg'
+  occupiedImage = 'assets/occupied-0.svg'
+  calendarImage = 'assets/calendar-0.svg'
+  reportImage = 'assets/report-0.svg'
   contentPage = 'occupied'
   backgroundColors = ['#7D7463', '#dabb83', '#A8A196', '#dabb83','#A8A196']
   insertParkingId! : string
   insertName!: string
   insertStartDate!: string
   insertEndDate!: string
+  selectedId!: string
+  selectedName!: string
+  selectedStartDate!: string
+  selectedEndDate!: string
+  selectedBackgroundColor!: string
+
 
   constructor (private parkingLotService: DataServiceService){}
 
@@ -83,10 +89,21 @@ changeContentPage(page: string): void {
   this.contentPage = page
 }
 
-openInsertPopup(){
-  const modal = document.getElementById("occupied-insert-Modal")
+openInsertPopup(modalName: string){
+  const modal = document.getElementById(modalName)
   modal!.style.display = "block";
 }
+
+  openViewPopup(modalName: string, id: string, name: string, startDate: string, endDate: string, color: number){
+    this.selectedId = id
+    this.selectedName = name
+    this.selectedStartDate = startDate
+    this.selectedEndDate = endDate
+    this.selectedBackgroundColor = this.backgroundColors[color]
+    const modal = document.getElementById(modalName)
+    modal!.style.display = "block";
+  }
+
 
 closePopup(modelName: string){
   const modal = document.getElementById(modelName);
