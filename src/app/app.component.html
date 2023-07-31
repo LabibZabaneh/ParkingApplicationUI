@@ -102,13 +102,13 @@
       <div id="occupied-edit-Modal" class="Modal">
         <div id="occupied-edit-card" [style.background-color]="selectedBackgroundColor">
           <label>Id:</label>
-          <input type="text" name="name">
+          <input type="text" name="name" [(ngModel)]="tempId">
           <label>Name:</label>
-          <input type="text" name="name">
+          <input type="text" name="name" [(ngModel)]="tempName">
           <label>Start Date:</label>
-          <input type="text" name="name">
+          <input type="text" name="name" [(ngModel)]="tempStartDate">
           <label>End Date:</label>
-          <input type="text" name="name">
+          <input type="text" name="name" [(ngModel)]="tempEndDate">
           <label>Duration:</label>
           <input type="text" name="name">
           <label>Time Left:</label>
@@ -121,6 +121,10 @@
           <input type="text" name="name">
           <label>Car Number:</label>
           <input type="text" name="name">
+          <div class="occupied-edit-popup-button-container">
+            <h4 class="occupied-edit-popup-apply-button" (click)="applyEditPopup()">Apply</h4>
+            <h4 class="occupied-edit-popup-back-button" (click)="closePopup('occupied-edit-Modal')">Back</h4>
+          </div>
         </div>
       </div>
     </div>

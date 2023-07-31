@@ -340,7 +340,7 @@
   font-size: 16px;
 }
 #occupied-insert-Modal .occupied-insert-popup-insert-button {
-  background-color: #07b407;
+  background-color: #339933;
   width: fit-content;
   padding: 5px 5px;
   border-radius: 5px;
@@ -436,13 +436,46 @@ div#occupied-edit-card {
   width: fit-content;
   padding: 13px 13px;
   border-radius: 6px;
-  top: 5%;
+  position: absolute;
   left: 35%;
+  top: 5%;
 }
 div#occupied-edit-card input {
   margin-top: 3px;
   margin-bottom: 7px;
   border-radius: 4px;
   padding: 3px 3px;
+}
+#occupied-edit-Modal .occupied-edit-popup-button-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+#occupied-edit-Modal .occupied-edit-popup-back-button {
+  background-color: #ff0000;
+  width: fit-content;
+  padding: 5px 5px;
+  border-radius: 5px;
+  color: #fff;
+  margin-right: 10%;
+  margin-left: 14%;
+}
+#occupied-edit-Modal .occupied-edit-popup-back-button:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+#occupied-edit-Modal .occupied-edit-popup-apply-button {
+  background-color: #339933;
+  width: fit-content;
+  padding: 5px 5px;
+  border-radius: 5px;
+  color: #fff;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+#occupied-edit-Modal .occupied-edit-popup-apply-button:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
 }
 

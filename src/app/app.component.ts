@@ -30,6 +30,10 @@ export class AppComponent {
   selectedStartDate!: string
   selectedEndDate!: string
   selectedBackgroundColor!: string
+  tempId!: string
+  tempName!: string
+  tempStartDate!: string
+  tempEndDate!: string
 
 
   constructor (private parkingLotService: DataServiceService){}
@@ -101,12 +105,28 @@ openInsertPopup(modalName: string){
     this.selectedEndDate = endDate
     this.selectedBackgroundColor = this.backgroundColors[color]
     const modal = document.getElementById(modalName)
-    modal!.style.display = "block";
+    modal!.style.display = "block"
+    this.tempId = this.selectedId
+    this.tempName = this.selectedName
+    this.tempStartDate = this.selectedStartDate
+    this.tempEndDate = this.selectedEndDate
   }
 
 
 closePopup(modelName: string){
   const modal = document.getElementById(modelName);
   modal!.style.display = "none";
+}
+
+applyEditPopup(){
+  this.selectedId = this.tempName;
+  this.selectedName = this.name;
+  this.selectedStartDate = this.tempStartDate;
+  this.selectedEndDate = this.tempEndDate
+  this.tempId = '';
+  this.tempName = '';
+  this.tempStartDate = '';
+  this.tempEndDate = '';
+  this.closePopup('occupied-edit-Modal')
 }
 }
