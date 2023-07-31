@@ -90,13 +90,37 @@
           <h4>2 Months</h4>
           <h4>20 days left</h4>
           <h4>+0790000000</h4>
+          <h4>test@gmail.com</h4>
           <h4>BMW</h4>
           <h4>00-0000</h4>
-          <h4>test@gmail.com</h4>
           <div class="occupied-view-card-button-container"><br>
-            <h4 class="occupied-view-popup-button-edit-button">Edit</h4>
+            <h4 class="occupied-view-popup-button-edit-button" (click)="openInsertPopup('occupied-edit-Modal')">Edit</h4>
             <h4 class="occupied-view-popup-button-close-button" (click)="closePopup('occupied-view-Modal')">Close</h4>
           </div>
+        </div>
+      </div>
+      <div id="occupied-edit-Modal" class="Modal">
+        <div id="occupied-edit-card" [style.background-color]="selectedBackgroundColor">
+          <label>Id:</label>
+          <input type="text" name="name">
+          <label>Name:</label>
+          <input type="text" name="name">
+          <label>Start Date:</label>
+          <input type="text" name="name">
+          <label>End Date:</label>
+          <input type="text" name="name">
+          <label>Duration:</label>
+          <input type="text" name="name">
+          <label>Time Left:</label>
+          <input type="text" name="name">
+          <label>Phone:</label>
+          <input type="text" name="name">
+          <label>Email:</label>
+          <input type="text" name="name">
+          <label>Car Brand:</label>
+          <input type="text" name="name">
+          <label>Car Number:</label>
+          <input type="text" name="name">
         </div>
       </div>
     </div>

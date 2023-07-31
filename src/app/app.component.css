@@ -422,3 +422,27 @@
   font-size: 250%;
   padding-bottom: 5px;
 }
+#occupied-edit-Modal {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+div#occupied-edit-card {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 13px 13px;
+  border-radius: 6px;
+  top: 5%;
+  left: 35%;
+}
+div#occupied-edit-card input {
+  margin-top: 3px;
+  margin-bottom: 7px;
+  border-radius: 4px;
+  padding: 3px 3px;
+}
+
