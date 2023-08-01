@@ -297,6 +297,14 @@
     margin-right: 10px;
     margin-bottom: 5px;
 }
+.occupied-card-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5px;
+}
+.occupied-card-header img {
+  margin-left: auto;
+}
 .occupied-card p {
     padding-bottom: 5px ;
 }
@@ -320,7 +328,7 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 5%;
-  left: 35%;
+  left: 27.7%;
   color: #fff;
   font-size: 15px;
 }
@@ -380,7 +388,7 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 5%;
-  left: 27.5%;
+  left: 27.7%;
 }
 #occupied-view-Modal .occupied-view-card-button-container {
   display: flex;
@@ -437,16 +445,18 @@
   z-index: 1;
 }
 div#occupied-edit-card {
+  font-size: 22px;
   display: flex;
   flex-direction: column;
   width: fit-content;
   padding: 13px 13px;
   border-radius: 6px;
   position: absolute;
-  left: 35%;
+  left: 27.7%;
   top: 5%;
 }
 div#occupied-edit-card input {
+  font-size: 17px;
   margin-top: 3px;
   margin-bottom: 7px;
   border-radius: 4px;

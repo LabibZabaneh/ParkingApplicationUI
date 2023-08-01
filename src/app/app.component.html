@@ -58,10 +58,13 @@
       </div>
       <div class="occupied-body">
         <div *ngFor="let parkingLot of parkingData; let i = index" class="occupied-card" [style.background-color]="backgroundColors[i % backgroundColors.length]" (click)="openViewPopup('occupied-view-Modal', parkingLot.id, parkingLot.name, parkingLot.startDate, parkingLot.endDate, i % backgroundColors.length, parkingLot.phone, parkingLot.email, parkingLot.carBrand, parkingLot.carNumber)">
-            <h3>{{ parkingLot.id }}</h3><br>
-            <p>{{ parkingLot.name }}</p>
-            <p>From {{ parkingLot.startDate }}</p>
-            <p>Until {{ parkingLot.endDate }}</p>
+            <div class="occupied-card-header">
+              <h3>{{ parkingLot.id }}</h3>
+              <img class="icon" src="assets/x.svg" alt="Occupied Icon"/><br>
+            </div>
+          <p>{{ parkingLot.name }}</p>
+          <p>From {{ parkingLot.startDate }}</p>
+          <p>Until {{ parkingLot.endDate }}</p>
         </div>
       </div>
       <div id="occupied-insert-Modal" class="Modal">
@@ -72,9 +75,9 @@
           <label>Occupant's Name:</label>
           <input type="text" name="name" [(ngModel)]="insertName">
           <label>Start Date:</label>
-          <input type="text" name="startDate" [(ngModel)]="insertStartDate">
+          <input type="date" name="startDate" [(ngModel)]="insertStartDate">
           <label>End Date:</label>
-          <input type="text" name="endDate" [(ngModel)]="insertEndDate">
+          <input type="date" name="endDate" [(ngModel)]="insertEndDate">
           <label>Phone:</label>
           <input type="text" name="phone" [(ngModel)]="insertPhone">
           <label>Email:</label>
@@ -82,7 +85,7 @@
           <label>Car Brand:</label>
           <input type="text" name="carBrand" [(ngModel)]="insertCarBrand">
           <label>Car Number:</label>
-          <input type="text" name="carNumber" [(ngModel)]="insertCarNumber">
+          <input type="" name="carNumber" [(ngModel)]="insertCarNumber">
           <div class="occupied-insert-popup-button-container"><br>
             <h4 class="occupied-insert-popup-insert-button" (click)="addParkingData()">Insert</h4>
             <h4 class="occupied-insert-popup-close-button" (click)="closePopup('occupied-insert-Modal')">Close</h4>
