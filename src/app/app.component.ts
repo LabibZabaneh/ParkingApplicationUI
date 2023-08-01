@@ -8,10 +8,9 @@ import {DataServiceService} from './data-service.service'
 })
 export class AppComponent {
   title = 'angular-new';
-  parkingdata!: any[]
+  parkingData!: any[]
   lotId!: string
   name!: string
-  carNumber!: string
   startDate!: string
   endDate!: string
   userImage = 'assets/user-0.svg'
@@ -20,7 +19,7 @@ export class AppComponent {
   calendarImage = 'assets/calendar-0.svg'
   reportImage = 'assets/report-0.svg'
   contentPage = 'occupied'
-  backgroundColors = ['#7D7463', '#dabb83', '#A8A196', '#dabb83','#A8A196']
+  backgroundColors = ['#7D7463', '#dabb83', '#A8A196']
   insertParkingId! : string
   insertName!: string
   insertStartDate!: string
@@ -29,6 +28,10 @@ export class AppComponent {
   selectedName!: string
   selectedStartDate!: string
   selectedEndDate!: string
+  selectedPhone!: string
+  selectedEmail!: string
+  selectedCarBrand!: string
+  selectedCarNumber!: string
   selectedBackgroundColor!: string
   tempId!: string
   tempName!: string
@@ -44,13 +47,13 @@ export class AppComponent {
 
 loadParkingdata(){
   this.parkingLotService.getParkingData().subscribe(data => {
-    this.parkingdata = data
+    this.parkingData = data
   })
 }
 
 addParkingData(){
    this.parkingLotService.addParkingData(this.insertParkingId, this.insertName, '123', this.insertStartDate, this.insertEndDate).subscribe((data => {
-    this.parkingdata = data
+    this.parkingData = data
      this.closePopup("occupied-insert-Modal")
   }))
 }
@@ -60,13 +63,13 @@ deleteParkingData(){
 
   } else {
   this.parkingLotService.deleteParkingData(this.lotId).subscribe((data => {
-    this.parkingdata = data
+    this.parkingData = data
   }))
 }
 }
 
 getParkingDataLength(){
-  return this.parkingdata ? this.parkingdata.length : 0
+  return this.parkingData ? this.parkingData.length : 0
 }
 
 changeUserURL(newURL: string): void {
@@ -95,14 +98,18 @@ changeContentPage(page: string): void {
 
 openInsertPopup(modalName: string){
   const modal = document.getElementById(modalName)
-  modal!.style.display = "block";
+  modal!.style.display = "flex";
 }
 
-  openViewPopup(modalName: string, id: string, name: string, startDate: string, endDate: string, color: number){
+  openViewPopup(modalName: string, id: string, name: string, startDate: string, endDate: string, color: number, phone: string, email: string, carBrand: string, carNumber: string){
     this.selectedId = id
     this.selectedName = name
     this.selectedStartDate = startDate
     this.selectedEndDate = endDate
+    this.selectedPhone = phone
+    this.selectedEmail = email
+    this.selectedCarBrand = carBrand
+    this.selectedCarNumber = carNumber
     this.selectedBackgroundColor = this.backgroundColors[color]
     const modal = document.getElementById(modalName)
     modal!.style.display = "block"
@@ -112,15 +119,14 @@ openInsertPopup(modalName: string){
     this.tempEndDate = this.selectedEndDate
   }
 
-
 closePopup(modelName: string){
   const modal = document.getElementById(modelName);
   modal!.style.display = "none";
 }
 
 applyEditPopup(){
-  this.selectedId = this.tempName;
-  this.selectedName = this.name;
+  this.selectedId = this.tempId;
+  this.selectedName = this.tempName;
   this.selectedStartDate = this.tempStartDate;
   this.selectedEndDate = this.tempEndDate
   this.tempId = '';

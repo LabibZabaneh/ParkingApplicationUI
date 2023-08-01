@@ -57,7 +57,7 @@
         <h4 class="occupied-insert-button" (click)="openInsertPopup('occupied-insert-Modal')">Insert</h4>
       </div>
       <div class="occupied-body">
-        <div *ngFor="let parkingLot of parkingdata; let i = index" class="occupied-card" [style.background-color]="backgroundColors[i % backgroundColors.length]" (click)="openViewPopup('occupied-view-Modal', parkingLot.id, parkingLot.name, parkingLot.startDate, parkingLot.endDate, i % backgroundColors.length)">
+        <div *ngFor="let parkingLot of parkingData; let i = index" class="occupied-card" [style.background-color]="backgroundColors[i % backgroundColors.length]" (click)="openViewPopup('occupied-view-Modal', parkingLot.id, parkingLot.name, parkingLot.startDate, parkingLot.endDate, i % backgroundColors.length, parkingLot.phone, parkingLot.email, parkingLot.carBrand, parkingLot.carNumber)">
             <h3>{{ parkingLot.id }}</h3><br>
             <p>{{ parkingLot.name }}</p>
             <p>From {{ parkingLot.startDate }}</p>
@@ -89,10 +89,10 @@
           <h4>Until {{ selectedEndDate }}</h4>
           <h4>2 Months</h4>
           <h4>20 days left</h4>
-          <h4>+0790000000</h4>
-          <h4>test@gmail.com</h4>
-          <h4>BMW</h4>
-          <h4>00-0000</h4>
+          <h4>{{ selectedPhone }}</h4>
+          <h4>{{ selectedEmail }}</h4>
+          <h4>{{ selectedCarBrand}}</h4>
+          <h4>{{ selectedCarNumber}}</h4>
           <div class="occupied-view-card-button-container"><br>
             <h4 class="occupied-view-popup-button-edit-button" (click)="openInsertPopup('occupied-edit-Modal')">Edit</h4>
             <h4 class="occupied-view-popup-button-close-button" (click)="closePopup('occupied-view-Modal')">Close</h4>
