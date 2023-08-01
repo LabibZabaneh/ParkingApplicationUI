@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataServiceService {
-  private baseUrl = 'http://localhost:8080'; 
+  private baseUrl = 'http://localhost:8080';
 
   constructor(private http: HttpClient) {}
 
@@ -14,8 +14,8 @@ export class DataServiceService {
     return this.http.get<any[]>(`${this.baseUrl}`)
   }
 
-  addParkingData(id: string, name: string, carNumber: string, startDate:string, endDate: string) :Observable<any[]>{
-    return this.http.get<any[]>(`${this.baseUrl}/addParking/${id}//${name}/${carNumber}/${startDate}/${endDate}`)
+  addParkingData(id: string, name: string, carNumber: string, startDate:string, endDate: string, phone: string, email: string, carBrand: string) :Observable<any[]>{
+    return this.http.get<any[]>(`${this.baseUrl}/addParking/${id}//${name}/${carNumber}/${startDate}/${endDate}/${phone}/${email}/${carBrand}`)
   }
 
   deleteParkingData(id :string) :Observable<any[]>{

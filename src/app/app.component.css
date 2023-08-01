@@ -366,8 +366,6 @@
 }
 #occupied-view-Modal {
   display: none;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -376,34 +374,40 @@
 }
 #occupied-view-Modal .occupied-view-card {
   background-color: #fff;
-  width: fit-content;
+  width: 250px;
   padding: 10px 10px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 5%;
-  left: 35%;
+  left: 27.5%;
 }
 #occupied-view-Modal .occupied-view-card-button-container {
   display: flex;
-  margin-top: 20%;
+  margin-top: 15%;
 }
 #occupied-view-Modal .occupied-view-popup-button-close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ff0000;
-  width: fit-content;
+  width: 130px;
   padding: 5px 5px;
   border-radius: 5px;
   color: #fff;
   margin-right: 10%;
-  margin-left: 14%;
+  margin-left: 15%;
 }
 #occupied-view-Modal .occupied-view-popup-button-close-button:hover {
   cursor: pointer;
   transform: translateY(-1px);
 }
 #occupied-view-Modal .occupied-view-popup-button-edit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #e8a908;
-  width: fit-content;
+  width: 130px;
   padding: 5px 5px;
   border-radius: 5px;
   color: #fff;

@@ -20,14 +20,14 @@ export class DataComponentComponent implements OnInit {
   ngOnInit(): void {
       this.loadParkingdata()
   }
-  
+
   loadParkingdata(){
     this.parkingLotService.getParkingData().subscribe(data => {
       this.parkingdata = data
     })
   }
 
-  openPopup(pakingid :string, name: string, carNumber: string, startDate: string, endDate: string){ 
+  openPopup(pakingid :string, name: string, carNumber: string, startDate: string, endDate: string){
     this.oldParkingId = pakingid
     this.name = name
     this.carNumber = carNumber
@@ -44,7 +44,7 @@ export class DataComponentComponent implements OnInit {
 
 
   addParkingData(){
-    this.parkingLotService.addParkingData(this.parkingId, this.name, this.carNumber, this.startDate, this.endDate).subscribe((data => {
+    this.parkingLotService.addParkingData(this.parkingId, this.name, this.carNumber, this.startDate, this.endDate, "123", "!23", "123").subscribe((data => {
     this.parkingdata = data
     this.closePopup()
   }))

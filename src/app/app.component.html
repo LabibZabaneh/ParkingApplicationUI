@@ -75,6 +75,14 @@
           <input type="text" name="startDate" [(ngModel)]="insertStartDate">
           <label>End Date:</label>
           <input type="text" name="endDate" [(ngModel)]="insertEndDate">
+          <label>Phone:</label>
+          <input type="text" name="phone" [(ngModel)]="insertPhone">
+          <label>Email:</label>
+          <input type="text" name="email" [(ngModel)]="insertEmail">
+          <label>Car Brand:</label>
+          <input type="text" name="carBrand" [(ngModel)]="insertCarBrand">
+          <label>Car Number:</label>
+          <input type="text" name="carNumber" [(ngModel)]="insertCarNumber">
           <div class="occupied-insert-popup-button-container"><br>
             <h4 class="occupied-insert-popup-insert-button" (click)="addParkingData()">Insert</h4>
             <h4 class="occupied-insert-popup-close-button" (click)="closePopup('occupied-insert-Modal')">Close</h4>
@@ -109,18 +117,14 @@
           <input type="text" name="name" [(ngModel)]="tempStartDate">
           <label>End Date:</label>
           <input type="text" name="name" [(ngModel)]="tempEndDate">
-          <label>Duration:</label>
-          <input type="text" name="name">
-          <label>Time Left:</label>
-          <input type="text" name="name">
           <label>Phone:</label>
-          <input type="text" name="name">
+          <input type="text" name="name" [(ngModel)]="tempPhone">
           <label>Email:</label>
-          <input type="text" name="name">
+          <input type="text" name="name" [(ngModel)]="tempEmail">
           <label>Car Brand:</label>
-          <input type="text" name="name">
+          <input type="text" name="name" [(ngModel)]="tempCarBrand">
           <label>Car Number:</label>
-          <input type="text" name="name">
+          <input type="text" name="name" [(ngModel)]="tempCarNumber">
           <div class="occupied-edit-popup-button-container">
             <h4 class="occupied-edit-popup-apply-button" (click)="applyEditPopup()">Apply</h4>
             <h4 class="occupied-edit-popup-back-button" (click)="closePopup('occupied-edit-Modal')">Back</h4>

@@ -24,6 +24,10 @@ export class AppComponent {
   insertName!: string
   insertStartDate!: string
   insertEndDate!: string
+  insertPhone!: string
+  insertEmail!: string
+  insertCarBrand!: string
+  insertCarNumber!: string
   selectedId!: string
   selectedName!: string
   selectedStartDate!: string
@@ -37,6 +41,10 @@ export class AppComponent {
   tempName!: string
   tempStartDate!: string
   tempEndDate!: string
+  tempPhone!: string
+  tempEmail!: string
+  tempCarBrand!: string
+  tempCarNumber!: string
 
 
   constructor (private parkingLotService: DataServiceService){}
@@ -52,7 +60,7 @@ loadParkingdata(){
 }
 
 addParkingData(){
-   this.parkingLotService.addParkingData(this.insertParkingId, this.insertName, '123', this.insertStartDate, this.insertEndDate).subscribe((data => {
+   this.parkingLotService.addParkingData(this.insertParkingId, this.insertName, this.insertCarNumber, this.insertStartDate, this.insertEndDate, this.insertPhone, this.insertEmail, this.insertCarBrand).subscribe((data => {
     this.parkingData = data
      this.closePopup("occupied-insert-Modal")
   }))
@@ -117,6 +125,10 @@ openInsertPopup(modalName: string){
     this.tempName = this.selectedName
     this.tempStartDate = this.selectedStartDate
     this.tempEndDate = this.selectedEndDate
+    this.tempPhone = this.selectedPhone
+    this.tempEmail = this.selectedEmail
+    this.tempCarBrand = this.selectedCarBrand
+    this.tempCarNumber = this.selectedCarNumber
   }
 
 closePopup(modelName: string){
@@ -129,10 +141,18 @@ applyEditPopup(){
   this.selectedName = this.tempName;
   this.selectedStartDate = this.tempStartDate;
   this.selectedEndDate = this.tempEndDate
-  this.tempId = '';
-  this.tempName = '';
-  this.tempStartDate = '';
-  this.tempEndDate = '';
+  this.selectedPhone = this.tempPhone
+  this.selectedEmail = this.tempEmail
+  this.selectedCarBrand = this.tempCarBrand
+  this.selectedCarNumber = this.tempCarNumber
+  this.tempId = ''
+  this.tempName = ''
+  this.tempStartDate = ''
+  this.tempEndDate = ''
+  this.tempPhone = ''
+  this.tempEmail = ''
+  this.tempCarBrand = ''
+  this.tempCarNumber = ''
   this.closePopup('occupied-edit-Modal')
 }
 }
