@@ -4,8 +4,35 @@
 <div class="available-content-conatiner">
   <div class="available-header">
     <h3>Available Spaces</h3>
+    <h4 class="available-insert-button" (click)="openInsertPopup('available-insert-Modal')">Insert</h4>
   </div>
   <div class="available-body">
     <h3>test</h3>
   </div>
+  <div id="available-insert-Modal" class="Modal">
+  <form class="available-insert-modal-content">
+    <h2>Insert New Parking</h2><br>
+    <label>Parking Id:</label>
+    <input type="text" name="parkingId" [(ngModel)]="insertParkingId">
+    <label>Occupant's Name:</label>
+    <input type="text" name="name" [(ngModel)]="insertName">
+    <label>Start Date:</label>
+    <input type="date" name="startDate" [(ngModel)]="insertStartDate">
+    <label>End Date:</label>
+    <input type="date" name="endDate" [(ngModel)]="insertEndDate">
+    <label>Phone:</label>
+    <input type="text" name="phone" [(ngModel)]="insertPhone">
+    <label>Email:</label>
+    <input type="text" name="email" [(ngModel)]="insertEmail">
+    <label>Car Brand:</label>
+    <input type="text" name="carBrand" [(ngModel)]="insertCarBrand">
+    <label>Car Number:</label>
+    <input type="" name="carNumber" [(ngModel)]="insertCarNumber">
+    <div class="occupied-insert-popup-button-container"><br>
+      <h4 class="occupied-insert-popup-insert-button" (click)="addParkingData()">Insert</h4>
+      <h4 class="occupied-insert-popup-close-button" (click)="closePopup('occupied-insert-Modal')">Close</h4>
+    </div>
+  </form>
+  <div class="occupied-popup-close" (click)="closePopup('occupied-insert-Modal')"></div>
+</div>
 </div>

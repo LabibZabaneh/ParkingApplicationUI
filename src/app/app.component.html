@@ -55,7 +55,7 @@
     <div *ngIf="contentPage=='occupied'" class="occupied-content-container">
       <div class="occupied-header">
         <h3>Occupied Spaces</h3>
-        <h4 class="occupied-insert-button" (click)="openInsertPopup('occupied-insert-Modal')">Insert</h4>
+        <h4 class="occupied-insert-button" (click)="openInsertPopup('available-insert-Modal')">Insert</h4>
       </div>
       <div class="occupied-body">
         <div *ngFor="let parkingLot of parkingData; let i = index" class="occupied-card" [style.background-color]="backgroundColors[i % backgroundColors.length]" (click)="openViewPopup('occupied-view-Modal', parkingLot.id, parkingLot.name, parkingLot.startDate, parkingLot.endDate, i % backgroundColors.length, parkingLot.phone, parkingLot.email, parkingLot.carBrand, parkingLot.carNumber)">
@@ -83,7 +83,7 @@
           <label>Car Brand:</label>
           <input type="text" name="carBrand" [(ngModel)]="insertCarBrand">
           <label>Car Number:</label>
-          <input type="" name="carNumber" [(ngModel)]="insertCarNumber">
+          <input type="text" name="carNumber" [(ngModel)]="insertCarNumber">
           <div class="occupied-insert-popup-button-container"><br>
             <h4 class="occupied-insert-popup-insert-button" (click)="addParkingData()">Insert</h4>
             <h4 class="occupied-insert-popup-close-button" (click)="closePopup('occupied-insert-Modal')">Close</h4>

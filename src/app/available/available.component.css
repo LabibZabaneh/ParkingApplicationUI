@@ -6,8 +6,8 @@
 }
 
 .available-content-conatiner {
-  width: 100%;
-  height: 110%;
+  width: 85%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -17,7 +17,7 @@
 }
 .available-header {
   display: flex;
-  width: 83%;
+  width: 96%;
   height: 60px;
   background-color: #fff;
   margin-top: 30px;
@@ -32,7 +32,7 @@
 }
 .available-body {
   display: flex;
-  width: 83%;
+  width: 96%;
   background-color: #fff;
   margin-left: 20px;
   margin-right: 20px;
@@ -41,3 +41,53 @@
   border-radius: 8px;
   gap: 5px;
 }
+.available-insert-button {
+  background-color: #339933;
+  color: #fff;
+  padding: 8px 8px;
+  border-radius: 8px;
+}
+.available-insert-button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+.available-header h3 {
+  width: 95%;
+}
+#available-insert-Modal {
+  display: none;
+  width: 85%;
+  height: 110%;
+  top: 0%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+#available-insert-Modal .available-insert-modal-content {
+  max-width:13.5%;
+  background-color: #234E6D;
+  padding: 12px 12px;
+  border-radius: 5%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 5%;
+  left: 35%;
+  color: #fff;
+  font-size: 15px;
+}
+#available-insert-Modal .available-insert-modal-content input {
+  margin-bottom: 12px;
+  width: 100%;
+  border-radius: 7px;
+  padding: 5px 5px;
+  font-size: 15px;
+  margin-top: 5px;
+}
+#available-insert-Modal .occupied-insert-popup-button-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  font-size: 16px;
+}
+

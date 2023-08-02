@@ -18,7 +18,7 @@ export class AppComponent {
   occupiedImage = 'assets/occupied-0.svg'
   calendarImage = 'assets/calendar-0.svg'
   reportImage = 'assets/report-0.svg'
-  contentPage = 'dashboard'
+  contentPage = 'available'
   backgroundColors = ['#7D7463', '#dabb83', '#A8A196']
   insertParkingId! : string
   insertName!: string

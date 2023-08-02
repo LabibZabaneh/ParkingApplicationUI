@@ -262,8 +262,8 @@
 .occupied-insert-button {
     background-color: #339933;
     color: #fff;
-    padding: 5px 5px;
-    border-radius: 5px;
+    padding: 8px 8px;
+    border-radius: 8px;
 }
 .occupied-header h3 {
     width: 95%;
