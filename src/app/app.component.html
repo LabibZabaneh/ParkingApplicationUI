@@ -12,7 +12,7 @@
             <a (click)="changeContentPage('total-spaces')"><img class="icon" [src]="userImage" alt="Users Icon"/><p>Total Spaces</p></a>
           </li>
           <li (mouseover)="changeAvailableURL('assets/available-hover-3.svg')" (mouseout)="changeAvailableURL('assets/available-0.svg')">
-            <a><img class="icon" [src]="availableImage" alt="Available Icon"/><p>Available Spaces</p></a>
+            <a (click)="changeContentPage('available')"><img class="icon" [src]="availableImage" alt="Available Icon"/><p>Available Spaces</p></a>
           </li>
           <li (mouseover)="changeOccupiedURL('assets/occupied-hover-3.svg')" (mouseout)="changeOccupiedURL('assets/occupied-0.svg')">
             <a (click)="changeContentPage('occupied')"><img class="icon" [src]="occupiedImage" alt="Occupied Icon"/><p>Occupied Spaces</p></a>
@@ -51,6 +51,7 @@
         </div>
       </div>
     </div>
+    <app-available *ngIf="contentPage=='available'"></app-available>
     <div *ngIf="contentPage=='occupied'" class="occupied-content-container">
       <div class="occupied-header">
         <h3>Occupied Spaces</h3>
@@ -88,6 +89,7 @@
             <h4 class="occupied-insert-popup-close-button" (click)="closePopup('occupied-insert-Modal')">Close</h4>
           </div>
         </form>
+        <div class="occupied-popup-close" (click)="closePopup('occupied-insert-Modal')"></div>
       </div>
       <div id="occupied-view-Modal" class="Modal">
         <div class="occupied-view-card" [style.background-color]="selectedBackgroundColor">
@@ -106,7 +108,7 @@
             <h4 class="occupied-view-popup-button-close-button" (click)="deleteParkingData()">Delete</h4>
           </div>
         </div>
-        <div class="occupied-view-close" (click)="closePopup('occupied-view-Modal')"></div>
+        <div class="occupied-popup-close" (click)="closePopup('occupied-view-Modal')"></div>
       </div>
       <div id="occupied-edit-Modal" class="Modal">
         <div id="occupied-edit-card" [style.background-color]="selectedBackgroundColor">
@@ -131,6 +133,7 @@
             <h4 class="occupied-edit-popup-back-button" (click)="closePopup('occupied-edit-Modal')">Back</h4>
           </div>
         </div>
+        <div class="occupied-popup-close" (click)="closePopup('occupied-edit-Modal')"></div>
       </div>
     </div>
   </div>

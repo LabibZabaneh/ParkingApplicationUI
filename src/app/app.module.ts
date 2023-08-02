@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { FilterComponent } from './filter/filter.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AvailableComponent } from './available/available.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DataComponentComponent,
     FilterComponent,
     SideBarComponent,
-    DashboardComponent
+    DashboardComponent,
+    AvailableComponent
   ],                                 
   imports: [
     BrowserModule,
