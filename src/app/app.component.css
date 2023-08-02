@@ -9,7 +9,7 @@
 /* Side Nav */
 
 .side-nav {
-    width: 20%;
+    width: 15%;
     height: 100%;
     background: #234E6D;
     position: fixed;
@@ -379,6 +379,10 @@
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+.occupied-view-close {
+  width: 100%;
+  height: 100%;
 }
 #occupied-view-Modal .occupied-view-card {
   background-color: #fff;

@@ -58,10 +58,7 @@
       </div>
       <div class="occupied-body">
         <div *ngFor="let parkingLot of parkingData; let i = index" class="occupied-card" [style.background-color]="backgroundColors[i % backgroundColors.length]" (click)="openViewPopup('occupied-view-Modal', parkingLot.id, parkingLot.name, parkingLot.startDate, parkingLot.endDate, i % backgroundColors.length, parkingLot.phone, parkingLot.email, parkingLot.carBrand, parkingLot.carNumber)">
-            <div class="occupied-card-header">
-              <h3>{{ parkingLot.id }}</h3>
-              <img class="icon" src="assets/x.svg" alt="Occupied Icon"/><br>
-            </div>
+          <h3>{{ parkingLot.id }}</h3><br>
           <p>{{ parkingLot.name }}</p>
           <p>From {{ parkingLot.startDate }}</p>
           <p>Until {{ parkingLot.endDate }}</p>
@@ -106,9 +103,10 @@
           <h4>{{ selectedCarNumber}}</h4>
           <div class="occupied-view-card-button-container"><br>
             <h4 class="occupied-view-popup-button-edit-button" (click)="openInsertPopup('occupied-edit-Modal')">Edit</h4>
-            <h4 class="occupied-view-popup-button-close-button" (click)="closePopup('occupied-view-Modal')">Close</h4>
+            <h4 class="occupied-view-popup-button-close-button" (click)="deleteParkingData()">Delete</h4>
           </div>
         </div>
+        <div class="occupied-view-close" (click)="closePopup('occupied-view-Modal')"></div>
       </div>
       <div id="occupied-edit-Modal" class="Modal">
         <div id="occupied-edit-card" [style.background-color]="selectedBackgroundColor">

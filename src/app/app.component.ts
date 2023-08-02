@@ -67,11 +67,12 @@ addParkingData(){
 }
 
 deleteParkingData(){
-  if(this.lotId === undefined || this.lotId === null){
+  if(this.selectedId === undefined || this.selectedId === null){
 
   } else {
-  this.parkingLotService.deleteParkingData(this.lotId).subscribe((data => {
+  this.parkingLotService.deleteParkingData(this.selectedId).subscribe((data => {
     this.parkingData = data
+    this.closePopup("occupied-view-Modal")
   }))
 }
 }
